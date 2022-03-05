@@ -12,6 +12,10 @@ from flaskr.db import get_db
 # all routes in this blueprint are pre-pended with '/auth'
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
+@bp.route('/test')
+def test():
+    return 'Testing 1 2 3'
+
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
@@ -38,7 +42,7 @@ def register():
                 return redirect(url_for("auth.login"))
         flash(error)
 
-        return render_template('auth/register.html')
+    return render_template('auth/register.html')
 
 @bp.route('/login', methods=('GET', 'POST'))
 def login():
