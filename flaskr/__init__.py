@@ -44,4 +44,10 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
+    from . import blog
+    app.register_blueprint(blog.bp)
+    # blog has no url_prefix, so we set the empty
+    # url to our 'index' endpoint
+    app.add_url_rule('/', endpoint='index')
+
     return app
