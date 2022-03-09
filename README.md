@@ -1,5 +1,5 @@
 # Flask Blog
-This is an implementation of the tutorial from the Flask Docs.
+This is an implementation of the [tutorial](https://flask.palletsprojects.com/en/2.0.x/tutorial/) from the Flask Docs.
 
 This is useful to see the basic structure of a Flask API.
 
