@@ -6,7 +6,7 @@ def test_register(client, app):
     assert client.get('/auth/register').status_code == 200
     response = client.post(
             '/auth/register', data={'username': 'a', 'password': 'a'})
-    assert 'http;//localhost/auth/login' == response.headers['Location']
+    assert 'http://localhost/auth/login' == response.headers['Location']
 
     with app.app_context():
         assert get_db().execute(
@@ -15,7 +15,7 @@ def test_register(client, app):
 
 # parametrize runs the same test with different arguments
 @pytest.mark.parametrize(('username', 'password', 'message'), (
-    ('', '', b'Username is require.'),
+    ('', '', b'Username is required.'),
     ('a', '', b'Password is required.'),
     ('test', 'test', b'already registered'),
     ))
