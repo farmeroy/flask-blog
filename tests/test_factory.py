@@ -1,4 +1,4 @@
-from flask import create_app
+from flaskr import create_app
 
 def test_config():
     assert not create_app().testing
@@ -6,4 +6,4 @@ def test_config():
 
 def test_hello(client):
     response = client.get('/hello')
-    assert response.data == b'Hello, World!'
+    assert response.data == b'Hello World!'
