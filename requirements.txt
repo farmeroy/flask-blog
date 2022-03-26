@@ -2,7 +2,6 @@ attrs==21.4.0
 click==8.0.4
 coverage==6.3.2
 Flask==2.0.3
--e git+git@github.com:farmeroy/flask-blog.git@6dede73a12636ee3c77204d820f384ab495b2eca#egg=flaskr
 iniconfig==1.1.1
 itsdangerous==2.1.0
 Jinja2==3.0.3
