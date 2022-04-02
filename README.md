@@ -6,7 +6,7 @@ This is useful to see the basic structure of a Flask API.
 To run the blog, clone the repo and start a virtual environment. Then:
 
 ```
-pip -r requirements.txt
+pip install -r requirements.txt
 export FLASK_APP=flaskr
 flask run
 ```
